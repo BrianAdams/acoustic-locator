@@ -1,0 +1,11 @@
+{
+  "name": "openrov-plugin-acoustic-locator",
+  "description": "Acoustic location system",
+  "version": "0.0.0",
+  "homepage": "http://community.openrov.com/forum/topics/acoustic-location-system",
+  "main": "lib/acoustic-locator",
+  "keywords": [
+    "openrov",
+    "plugin"
+  ]
+}
