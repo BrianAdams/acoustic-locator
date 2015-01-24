@@ -101,6 +101,6 @@
 
   };
 
-    window.Cockpit.plugins.push(acoustic-locator);
+    window.Cockpit.plugins.push(acousticlocator);
 
 }(window, jQuery));
