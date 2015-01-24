@@ -1,9 +1,9 @@
 (function (window, $, undefined) {
     'use strict';
 
-    var acoustic-locator;
+    var acousticlocator;
 
-    acoustic-locator = function acoustic-locator(cockpit) {
+    acousticlocator = function acousticlocator(cockpit) {
         console.log("Loading acoustic-locator plugin in the browser.");
 
         // Instance variables
@@ -42,16 +42,24 @@
   };
 
   //This will be called by the input manager automatically
-  acoustic-locator.prototype.listen = function listen() {
-    var rov = this;
+  acousticlocator.prototype.listen = function listen() {
+    var alplugin = this;
 
     //This snippet allows you to listen to events coming
     //from the beaglebone.  Those coulbe be navdata, status, etc...
-    /*
-    this.cockpit.socket.on('navdata', function (data) {
-      rov.dosomethingwith(data);
+
+    //This snippet allows you to listen to events coming
+    //from the beaglebone.  Those coulbe be navdata, status, etc...
+    this.cockpit.socket.on('acousticlocation', function (data) {
+      //data is a JSON payload that can be accessed directly.
+
+      console.log(data.collectorRuntimeMS);
+      console.log(data.points);
+      console.log(data.points.length);
+      console.log(data.collectionDurationMS);
+
     });
-    /*
+
 
     //This example will put an entry in the pop-up Heads Up Menu
     /*

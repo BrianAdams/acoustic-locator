@@ -1,4 +1,4 @@
-function acoustic-locator(name, deps) {
+function acousticlocator(name, deps) {
     console.log("This is where plugin code for acoustic-locator loads in the node process.");
 
   //This is how you would register a listner to traffic from the browser
@@ -55,4 +55,4 @@ function acoustic-locator(name, deps) {
 
 };
 
-module.exports = acoustic-locator;
+module.exports = acousticlocator;
