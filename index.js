@@ -41,8 +41,24 @@ function acousticlocator(name, deps) {
   alSerialPort.on('data', function (datastring) {
     //we are just going to pass all messages as are downstream as acousticlocation message
     var jsondata;
+    jsondata = JSON.parse(datastring);
     //we need to convert the json string to a json object
-    deps.io.sockets.emit('acousticlocation', data);
+    deps.io.sockets.emit('acousticlocation', jsondata);
   });
+  setTimeout(function () {
+    data = {};
+    data.collectorRuntimeMS = 123123;
+    data.points = [
+      5256,
+      2352,
+      5256,
+      23515,
+      23552,
+      2523,
+      2555
+    ];
+    data.collectionDurationMS = 5000;
+    deps.io.sockets.emit('acousticlocation', data);
+  }, 5000);
 }
 module.exports = acousticlocator;
