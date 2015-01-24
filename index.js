@@ -59,6 +59,7 @@ function acousticlocator(name, deps) {
     ];
     data.collectionDurationMS = 5000;
     deps.io.sockets.emit('acousticlocation', data);
+    console.log('server emitted fake acousticlocation data');
   }, 5000);
 }
 module.exports = acousticlocator;
