@@ -45,7 +45,7 @@ function acousticlocator(name, deps) {
     //we need to convert the json string to a json object
     deps.io.sockets.emit('acousticlocation', jsondata);
   });
-  setTimeout(function () {
+  setInterval(function () {
     data = {};
     data.collectorRuntimeMS = 123123;
     data.points = [
